@@ -1,0 +1,179 @@
+@font-face {
+	font-family: 'Young Serif';
+	src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Outfit';
+	src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf');
+	font-weight: 100 1000;
+}
+
+:root {
+	--nutmeg: hsl(14, 45%, 36%);
+	--dark-raspberry: hsl(332, 51%, 32%);
+	--white: hsl(0, 0%, 100%);
+	--rose-white: hsl(330, 100%, 98%);
+	--eggshell: hsl(30, 54%, 90%);
+	--light-grey: hsl(30, 18%, 87%);
+	--wenge-brown: hsl(30, 10%, 34%);
+	--dark-charcoal: hsl(24, 5%, 18%);
+	--p-font-size: 0.7em;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	font-family: 'Outfit';
+	background-color: var(--eggshell);
+	color: var(--dark-charcoal);
+}
+
+main {
+	padding: 2rem;
+	max-width: 30rem;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+	display: flex;
+}
+
+.container {
+	background-color: var(--white);
+	padding: 1rem;
+	border-radius: 1rem;
+}
+
+.container img {
+	max-width: 100%;
+	margin-bottom: 1rem;
+	border-radius: 0.7rem;
+}
+
+h1 {
+	font-family: 'young-serif';
+	font-size: 1.55em;
+	margin-bottom: 0.5em;
+}
+
+p,
+li {
+	font-size: var(--p-font-size);
+}
+
+strong {
+	font-size: 1em;
+}
+
+ul,
+ol {
+	margin: 0;
+	padding-left: 1rem;
+}
+
+li {
+	padding-left: 0.6rem;
+	margin-bottom: 0.5rem;
+}
+
+li::marker {
+	color: var(--dark-raspberry);
+	font-weight: 700;
+	font-family: 'Outfit';
+}
+
+li:last-child {
+	margin-bottom: 0;
+}
+
+.highlight {
+	background-color: var(--rose-white);
+	padding: 0.7rem;
+	border-radius: 0.7rem;
+	margin-top: 1rem;
+}
+
+.highlight h3 {
+	color: var(--dark-raspberry);
+	margin-bottom: 0.4rem;
+}
+
+section {
+	margin-top: 1rem;
+}
+
+section h2 {
+	color: var(--nutmeg);
+	font-family: 'Young Serif';
+	margin-bottom: 0.5rem;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 0.5rem;
+}
+
+td {
+	border-bottom: 1px solid var(--light-grey);
+	padding: 0.5em;
+	font-size: var(--p-font-size);
+}
+
+.data {
+	font-weight: 900;
+	color: var(--nutmeg);
+}
+
+footer {
+	width: 100%;
+	padding: 0.5em;
+	align-items: flex-end;
+}
+
+footer,
+footer a,
+footer em {
+	font-size: 0.6rem;
+	text-align: center;
+	margin-top: 1rem;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 600px) {
+	body {
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	body {
+		background-color: var(--white);
+	}
+
+	main,
+	.container {
+		max-width: 100%;
+		padding: 0;
+	}
+
+	article {
+		padding: 0 1em;
+	}
+
+	.container img {
+		border-radius: 0;
+	}
+}
